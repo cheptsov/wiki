@@ -9,4 +9,4 @@ RUN go build -o main .
 
 EXPOSE 8080
 # CMD ["/app/main"]
-CMD ["dlv", "--listen=localhost:2345", "--headless=true", "--log", "--api-version=2", "--backend=native", "exec", "/app/main", "--"]
+CMD ["dlv", "--listen=0.0.0.0:2345", "--headless=true", "--log", "--api-version=2", "--backend=native", "exec", "/app/main", "--"]
