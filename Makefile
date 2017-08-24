@@ -5,9 +5,9 @@ build:
 	go build -i -o main -gcflags "-N -l" main.go
 
 debug: init build
-	dlv --listen=localhost:2345 --headless=true --log --api-version=2 --backend=native exec ./main --
+	dlv --listen=127.0.0.1:2345 --headless=true --log --api-version=2 --backend=native exec ./main --
 
-image:
+image: build
 	docker build -t wiki .
 
 deploy: image

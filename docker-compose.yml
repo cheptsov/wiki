@@ -2,7 +2,8 @@ version: "3"
 
 services:
   app:
-    image: wiki
+    build:
+      context: .
     ports:
       - "8080:8080"
       - "2345:2345"
